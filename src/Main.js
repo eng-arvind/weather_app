@@ -15,7 +15,7 @@ function Main(e) {
     const [updatloc,setupdatloc] = useState("delhi")
     useEffect(() => {
         const fetchApi = async () => {
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${updatloc}&units=metric&appid=4dae035daf5a713135a22a219f511ae3`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${updatloc}&units=metric&appid=4dae035daf5a713135a22a219f511ae3`
             const resp = await fetch(url);
             const respjson = await resp.json();
             setCity(respjson.main);
